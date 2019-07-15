@@ -1,22 +1,6 @@
 const Discord = require('discord.js');
-const { Client, RichEmbed, Emoji, MessageReaction } = require('discord.js');
-const client = new Client({ disableEveryone: true });
+const client = new Discord.Client();
 const eco = require("./economy.js");
-
-const yourID = "395397757717708800"; //Instructions on how to get this: https://redd.it/40zgse
-const setupCMD = "!createrolemessage";
-const initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
-const embedMessage = `
-React to the emoji that matches the role you wish to receive.
-If you would like to remove the role, simply remove your reaction!
-`;
-const embedFooter = "Role Reactions"; // Must set this if "embed" is set to true
-const roles = ["Happy", "Sad"];
-const reactions = [":smile:", ":frown"]; // For custom emojis, provide the name of the emoji
-const embed = false; // Set to "true" if you want all roles to be in a single embed
-const embedColor = "#dd2423"; // Set the embed color if the "embed" variable is set to true
-const embedThumbnail = true; // Set to "true" if you want to set a thumbnail in the embed
-const embedThumbnailLink = "https://i.imgur.com/CGKeIr2.jpg"; // The link for the embed thumbnail
 
 var config = {
     botPrefix: "!"
