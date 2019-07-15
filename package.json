@@ -1,0 +1,19 @@
+{
+  "name": "my-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "casino.js",
+  "scripts": {
+    "start": "node casino.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-economy": "^1.1.6",
+    "discord.js": "^11.5.1",
+    "sequelize": "^4.0.0-0",
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {}
+}
