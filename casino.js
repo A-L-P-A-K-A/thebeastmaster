@@ -185,7 +185,7 @@ var config = {
 			"func": async function(m,a) {
 					var j = ['vendor'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 25,
+					  failurerate: 30,
 					  money: Math.floor(Math.random() * 1000000),
 					  jobs: j
 					})
