@@ -86,7 +86,7 @@ var config = {
 		{
 			"cmd": "beastmaster",
 			"aliases": ["mutant", "mutated"],
-			"delay": 300,
+			"delay": 3600,
 			"func": async function(m,a) {
 					var j = ['beastmaster'];
 					var output = await eco.Work(m.author.id, {
@@ -128,7 +128,7 @@ var config = {
 			"func": async function(m,a) {
 					var j = ['forage'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 50,
+					  failurerate: 70,
 					  money: Math.floor(Math.random() * 1000000),
 					  jobs: j
 					})
@@ -147,7 +147,7 @@ var config = {
 			"func": async function(m,a) {
 					var j = ['enzyme'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 40,
+					  failurerate: 35,
 					  money: Math.floor(Math.random() * 400000),
 					  jobs: j
 					})
@@ -166,7 +166,7 @@ var config = {
 			"func": async function(m,a) {
 					var j = ['dna'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 30,
+					  failurerate: 20,
 					  money: Math.floor(Math.random() * 250000),
 					  jobs: j
 					})
@@ -181,7 +181,7 @@ var config = {
 		{
 			"cmd": "vendor",
 			"aliases": ["sale", "merchant"],
-			"delay": 300,
+			"delay": 1800,
 			"func": async function(m,a) {
 					var j = ['vendor'];
 					var output = await eco.Work(m.author.id, {
