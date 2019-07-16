@@ -86,7 +86,7 @@ var config = {
 		{
 			"cmd": "beastmaster",
 			"aliases": ["mutant", "mutated"],
-			"delay": 3600,
+			"delay": 300,
 			"func": async function(m,a) {
 					var j = ['beastmaster'];
 					var output = await eco.Work(m.author.id, {
@@ -105,7 +105,7 @@ var config = {
 		{
 			"cmd": "help",
 			"aliases": ["info", "commands"],
-			"delay": 60,
+			"delay": 30,
 			"func": async function(m,a) {
 					var j = ['help'];
 					var output = await eco.Work(m.author.id, {
@@ -124,11 +124,11 @@ var config = {
 		{
 			"cmd": "forage",
 			"aliases": ["lyase", "11point"],
-			"delay": 180,
+			"delay": 60,
 			"func": async function(m,a) {
 					var j = ['forage'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 60,
+					  failurerate: 50,
 					  money: Math.floor(Math.random() * 1000000),
 					  jobs: j
 					})
@@ -143,7 +143,7 @@ var config = {
 		{
 			"cmd": "enzyme",
 			"aliases": ["krayt", "hydro"],
-			"delay": 180,
+			"delay": 60,
 			"func": async function(m,a) {
 					var j = ['enzyme'];
 					var output = await eco.Work(m.author.id, {
@@ -162,12 +162,12 @@ var config = {
 		{
 			"cmd": "dna",
 			"aliases": ["extract", "sample"],
-			"delay": 180,
+			"delay": 60,
 			"func": async function(m,a) {
 					var j = ['dna'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 20,
-					  money: Math.floor(Math.random() * 200000),
+					  failurerate: 30,
+					  money: Math.floor(Math.random() * 250000),
 					  jobs: j
 					})
 					if (output.earned == 0) {
@@ -181,11 +181,11 @@ var config = {
 		{
 			"cmd": "vendor",
 			"aliases": ["sale", "merchant"],
-			"delay": 3600,
+			"delay": 300,
 			"func": async function(m,a) {
 					var j = ['vendor'];
 					var output = await eco.Work(m.author.id, {
-					  failurerate: 10,
+					  failurerate: 25,
 					  money: Math.floor(Math.random() * 1000000),
 					  jobs: j
 					})
@@ -200,7 +200,7 @@ var config = {
 		{
 			"cmd": "duel",
 			"aliases": ["pvp", "1v1"],
-			"delay": 600,
+			"delay": 60,
 			"func": async function(m,a) {
 				var user = m.mentions.users.first()
 			 
@@ -225,7 +225,7 @@ var config = {
 							bal = Math.floor(Math.random()*10000);
 						}
 						var o = await eco.Transfer(user.id, m.author.id, bal).catch(console.error);
-						cs.success(m, "PvP", `You won the fight and won ${cs.formatter.format(bal)} from <@${user.id}>!`);
+						cs.success(m, "PvP", `You won the fight and win ${cs.formatter.format(bal)} from <@${user.id}>!`);
 					});
 				} else {
 					eco.FetchBalance(m.author.id).then(async (out) => {
