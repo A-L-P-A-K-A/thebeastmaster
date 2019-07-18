@@ -86,7 +86,7 @@ var config = {
 		{
 			"cmd": "beastmaster",
 			"aliases": ["mutant", "mutated"],
-			"delay": 3600,
+			"delay": 300,
 			"func": async function(m,a) {
 					var j = ['beastmaster'];
 					var output = await eco.Work(m.author.id, {
@@ -114,11 +114,11 @@ var config = {
 					  jobs: j
 					})
 					if (output.earned == 0) {
-						cs.fail(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard.`);
+						cs.fail(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard, expertise.`);
 						return;
 					}
 
-					cs.success(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard.`);
+					cs.success(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard, expertise.`);
 			}
 		},
 		{
@@ -200,7 +200,7 @@ var config = {
 		{
 			"cmd": "vendor",
 			"aliases": ["sale", "merchant"],
-			"delay": 1800,
+			"delay": 300,
 			"func": async function(m,a) {
 					var j = ['vendor'];
 					var output = await eco.Work(m.author.id, {
