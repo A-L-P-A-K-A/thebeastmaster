@@ -122,6 +122,25 @@ var config = {
 			}
 		},
 		{
+			"cmd": "expertise",
+			"aliases": ["calc", "exp"],
+			"delay": 30,
+			"func": async function(m,a) {
+					var j = ['expertise'];
+					var output = await eco.Work(m.author.id, {
+					  failurerate: 0,
+					  money: Math.floor(Math.random() * 0),
+					  jobs: j
+					})
+					if (output.earned == 0) {
+						cs.fail(m, "Expertise Calculator", `http://www.oekevo.org/expertisecalculator/`);
+						return;
+					}
+
+					cs.success(m, "Expertise Calculator", `http://www.oekevo.org/expertisecalculator/`);
+			}
+		},
+		{
 			"cmd": "forage",
 			"aliases": ["lyase", "11point"],
 			"delay": 60,
