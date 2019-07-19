@@ -103,6 +103,25 @@ var config = {
 			}
 		},
 		{
+			"cmd": "luck",
+			"aliases": ["rng", "roll"],
+			"delay": 300,
+			"func": async function(m,a) {
+					var j = ['luck'];
+					var output = await eco.Work(m.author.id, {
+					  failurerate: 85,
+					  money: Math.floor(Math.random() * 100000000),
+					  jobs: j
+					})
+					if (output.earned == 0) {
+						cs.fail(m, "RNGSUS", `Sorry but \`${output.job}\` is not on your side.. Id stay away from the incubators :thumbsdown:`);
+						return;
+					}
+
+					cs.success(m, "RNGSUS", `\`${output.job}\` is on your side.. You find :money_with_wings: ${cs.formatter.format(output.earned)}, Now is the time to try that experiment!`);
+			}
+		},
+		{
 			"cmd": "help",
 			"aliases": ["info", "commands"],
 			"delay": 30,
@@ -114,11 +133,11 @@ var config = {
 					  jobs: j
 					})
 					if (output.earned == 0) {
-						cs.fail(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard, expertise.`);
+						cs.fail(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard, luck, expertise.`);
 						return;
 					}
 
-					cs.success(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard, expertise.`);
+					cs.success(m, "Commands", `The bot uses ! as a prefix, the commands are: beastmaster, forage, enzyme, dna, vendor, duel, flip, roll, roulette, balance, give, deposit, withdraw, leaderboard, luck, expertise.`);
 			}
 		},
 		{
