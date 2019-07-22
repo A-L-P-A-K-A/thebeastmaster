@@ -271,7 +271,7 @@ var config = {
 						bal = bal * 0.75;
 						if (bal == 0) bal = Math.floor(Math.random()*1000)*1;
 						var o = await eco.SubstractFromBalance(out.userid, bal).catch(console.error);
-						cs.fail(m, "PvP", `You lost the fight to <@${user.id}> and lost ${cs.formatter.format(bal)}!`);
+						cs.fail(m, "PvP", `You lost the fight to <@${user.id}> and lose ${cs.formatter.format(bal)}!`);
 					});
 				}
 			}
