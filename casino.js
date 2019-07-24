@@ -318,7 +318,7 @@ var config = {
 		},
 		{
 			"cmd": "roulette",
-			"delays": 60,
+			"delays": 30,
 			"func": async function(m,a) {
 				var type = a[0];
 				if (type) type = type.toLowerCase();
